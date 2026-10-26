@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="HealthIncomplete" xml:space="preserve"><value>Capture or protocol loss detected; totals may be incomplete.</value></data>
+  <data name="HealthNoLoss" xml:space="preserve"><value>No capture or protocol loss detected yet; live correctness still needs game comparison.</value></data>
+  <data name="ProgressNoSelection" xml:space="preserve"><value>{0} candidate connections · none selected</value></data>
+  <data name="ProgressSelected" xml:space="preserve"><value>{0:N0} packets · {1:N0} frames · {2:N0} damage events · {3:N0} healing events · {4:N0} other opcodes · {5:N0} malformed · {6:N0} names decoded · {7:N0} name messages unresolved</value></data>
+  <data name="AlreadyActive" xml:space="preserve"><value>Capture is already active.</value></data>
+  <data name="AdapterNotFound" xml:space="preserve"><value>The selected adapter was not found. Install Npcap or choose another adapter.</value></data>
+  <data name="Capturing" xml:space="preserve"><value>Capturing on {0}; waiting for TCP port {1}. Select a flow when one appears.</value></data>
+  <data name="BufferTruncated" xml:space="preserve"><value>Preselection buffer was truncated; early damage may be missing.</value></data>
+  <data name="SelectedConnection" xml:space="preserve"><value>Selected {0}; {1}. EU damage accuracy remains unverified.</value></data>
+  <data name="FramingMatched" xml:space="preserve"><value>protocol framing matched</value></data>
+  <data name="AwaitingFraming" xml:space="preserve"><value>waiting for protocol framing</value></data>
+  <data name="StoppedAfterError" xml:space="preserve"><value>Capture stopped after adapter error: {0}</value></data>
+  <data name="Stopped" xml:space="preserve"><value>Capture stopped. Existing totals are preserved.</value></data>
+  <data name="PacketErrors" xml:space="preserve"><value>Capture packet errors: {0}; totals may be incomplete ({1}).</value></data>
+  <data name="FlowLimit" xml:space="preserve"><value>Flow limit reached; capture may be incomplete.</value></data>
+  <data name="ReplayFlow" xml:space="preserve"><value>Replay flow detected.</value></data>
+  <data name="AutoFlow" xml:space="preserve"><value>One verified game flow detected; selecting it automatically.</value></data>
+  <data name="MultipleFlows" xml:space="preserve"><value>Multiple TCP flows seen on the game port; select the game connection explicitly.</value></data>
+  <data name="ConnectionRestarted" xml:space="preserve"><value>Selected TCP connection restarted; totals reset for the new connection.</value></data>
+  <data name="ConnectionClosed" xml:space="preserve"><value>Selected TCP connection closed; select a new flow after reconnect.</value></data>
+  <data name="Gaps" xml:space="preserve"><value>TCP gaps/desyncs: {0}/{1}; totals may be incomplete.</value></data>
+  <data name="MalformedFrames" xml:space="preserve"><value>Malformed protocol frames: {0}; totals may be incomplete.</value></data>
+  <data name="DecodedFrames" xml:space="preserve"><value>Decoded {0} frames, {1} damage events, {2} healing events, {3} other opcodes.</value></data>
+  <data name="ReplayLineTooLong" xml:space="preserve"><value>Replay line {0} exceeds limit; skipped.</value></data>
+  <data name="InvalidReplayLine" xml:space="preserve"><value>Invalid replay record at line {0}; skipped.</value></data>
+  <data name="ReplayComplete" xml:space="preserve"><value>Replay complete: {0} records. Review any gap or malformed-frame warnings before trusting totals.</value></data>
+  <data name="RecordingFailed" xml:space="preserve"><value>Recording failed and was disabled; live decoding continues. {0}</value></data>
+  <data name="HealTableMissing" xml:space="preserve"><value>Required heal-skill protocol table is unavailable.</value></data>
+  <data name="EffectTableMissing" xml:space="preserve"><value>Required non-damage effect table is unavailable.</value></data>
+</root>

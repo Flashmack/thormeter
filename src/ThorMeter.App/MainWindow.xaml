@@ -1,0 +1,94 @@
+<Window x:Class="ThorMeter.App.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ xmlns:app="clr-namespace:ThorMeter.App"
+ Title="{x:Static app:UiText.WindowTitle}" Width="1080" Height="760" MinWidth="820" MinHeight="620"
+ Background="#131A26" Foreground="#F3F6FC" Topmost="{Binding AlwaysOnTop}">
+ <Grid Margin="20">
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <DockPanel Margin="0,0,0,18">
+   <CheckBox DockPanel.Dock="Right" Content="{x:Static app:UiText.AlwaysOnTop}" IsChecked="{Binding AlwaysOnTop}"/>
+   <StackPanel><TextBlock Text="{x:Static app:UiText.WindowTitle}" FontSize="24" FontWeight="Bold"/><TextBlock Text="{x:Static app:UiText.Tagline}" Foreground="#94A9C8" FontSize="11" Margin="0,4,0,0"/></StackPanel>
+  </DockPanel>
+  <StackPanel Grid.Row="1">
+   <WrapPanel Margin="0,0,0,10">
+    <ComboBox Width="140" ItemsSource="{Binding Modes}" SelectedItem="{Binding Mode}" IsEnabled="{Binding CanConfigure}"/>
+    <Button Content="{x:Static app:UiText.Start}" Command="{Binding StartCommand}"/>
+    <Button Content="{x:Static app:UiText.Stop}" Command="{Binding StopCommand}"/>
+    <Button Content="{Binding PauseLabel}" Command="{Binding PauseCommand}"/>
+    <Button Content="{x:Static app:UiText.ResetTotals}" Command="{Binding ResetCommand}"/>
+    <Button Content="{x:Static app:UiText.OpenReplay}" Command="{Binding ReplayCommand}"/>
+    <CheckBox Content="{x:Static app:UiText.ShowHps}" IsChecked="{Binding ShowHps}" VerticalAlignment="Center" Margin="12,0,0,0" ToolTip="{x:Static app:UiText.HealingCaution}"/>
+    <Button Content="{x:Static app:UiText.CopyHealDiagnostics}" Command="{Binding CopyHealDiagnosticsCommand}" ToolTip="{x:Static app:UiText.HealDiagnosticsNote}"/>
+   </WrapPanel>
+   <Grid Margin="0,0,0,8" IsEnabled="{Binding CanConfigure}">
+    <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+    <TextBlock Text="{x:Static app:UiText.Adapter}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <ComboBox Grid.Column="1" ItemsSource="{Binding Adapters}" DisplayMemberPath="Description" SelectedItem="{Binding SelectedAdapter}"/>
+    <Button Grid.Column="2" Content="{x:Static app:UiText.Refresh}" Command="{Binding RefreshCommand}"/>
+   </Grid>
+   <Grid Margin="0,0,0,10">
+    <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+    <TextBlock Text="{x:Static app:UiText.Connection}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <ComboBox Grid.Column="1" ItemsSource="{Binding Flows}" DisplayMemberPath="Label" SelectedItem="{Binding SelectedFlow}"/>
+    <Button Grid.Column="2" Content="{x:Static app:UiText.UseConnection}" Command="{Binding SelectFlowCommand}"/>
+   </Grid>
+   <Grid Margin="0,0,0,8">
+    <Grid.ColumnDefinitions><ColumnDefinition Width="Auto"/><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+    <TextBlock Text="{x:Static app:UiText.Target}" VerticalAlignment="Center" Margin="0,0,10,0"/>
+    <ComboBox Grid.Column="1" ItemsSource="{Binding Targets}" DisplayMemberPath="Label" SelectedItem="{Binding SelectedTarget}"/>
+    <Button Grid.Column="2" Content="{x:Static app:UiText.SelectMainTarget}" Command="{Binding SelectMainTargetCommand}" ToolTip="{x:Static app:UiText.MainTargetHint}"/>
+   </Grid>
+   <WrapPanel Margin="0,0,0,8">
+    <TextBlock Text="{x:Static app:UiText.TargetCategory}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+    <ComboBox Width="145" ItemsSource="{Binding TargetCategories}" DisplayMemberPath="Label" SelectedItem="{Binding SelectedTargetCategory}" Margin="0,0,10,0"/>
+    <TextBlock Text="{x:Static app:UiText.TargetSearch}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+    <TextBox Width="200" Text="{Binding TargetSearch, UpdateSourceTrigger=PropertyChanged}"/>
+   </WrapPanel>
+   <WrapPanel Margin="0,0,0,8" IsEnabled="{Binding CanEditSelectedTarget}">
+    <TextBlock Text="{x:Static app:UiText.TargetAlias}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+    <TextBox Width="180" Text="{Binding TargetAliasInput, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,6,0"/>
+    <Button Content="{x:Static app:UiText.SetTargetAlias}" Command="{Binding SetTargetAliasCommand}"/>
+    <Button Content="{x:Static app:UiText.ClearTargetAlias}" Command="{Binding ClearTargetAliasCommand}"/>
+    <TextBlock Text="{x:Static app:UiText.TargetTag}" VerticalAlignment="Center" Margin="10,0,8,0"/>
+    <ComboBox Width="130" ItemsSource="{Binding TargetTags}" DisplayMemberPath="Label" SelectedItem="{Binding SelectedTargetTag}"/>
+   </WrapPanel>
+   <CheckBox Content="{x:Static app:UiText.RecordTraffic}" IsChecked="{Binding Record}" IsEnabled="{Binding CanConfigure}" ToolTip="{Binding ReplayFolder}" Margin="0,0,0,8"/>
+   <WrapPanel Margin="0,0,0,10">
+    <TextBlock Text="{x:Static app:UiText.AliasSelected}" VerticalAlignment="Center" Margin="0,0,8,0"/>
+    <TextBox Width="180" Text="{Binding AliasInput, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,6,0"/>
+    <Button Content="{x:Static app:UiText.SetAlias}" Command="{Binding SetAliasCommand}"/>
+    <Button Content="{x:Static app:UiText.ClearAlias}" Command="{Binding ClearAliasCommand}"/>
+   </WrapPanel>
+  </StackPanel>
+  <Border Grid.Row="2" Background="#202837" CornerRadius="6" Padding="12" Margin="0,0,0,12">
+   <StackPanel><TextBlock Text="{Binding Status}" TextWrapping="Wrap" Foreground="#B9CEF1"/>
+    <TextBlock Text="{Binding Health}" TextWrapping="Wrap" Foreground="#E8C678" Margin="0,5,0,0"/>
+    <TextBlock Text="{Binding Progress}" TextWrapping="Wrap" Foreground="#94A9C8" Margin="0,4,0,0"/>
+    <TextBlock Text="{Binding Warning}" TextWrapping="Wrap" Foreground="#FF9C93" Margin="0,4,0,0"/></StackPanel>
+  </Border>
+  <DockPanel Grid.Row="3" Margin="0,0,0,8"><TextBlock DockPanel.Dock="Right" Text="{Binding DurationLabel}" Foreground="#94A9C8"/><TextBlock Text="{Binding DamageScopeLabel}" FontWeight="SemiBold"/></DockPanel>
+  <DataGrid x:Name="PlayerGrid" Grid.Row="4" ItemsSource="{Binding Rows}" SelectedItem="{Binding SelectedPlayer}" AutoGenerateColumns="False" IsReadOnly="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="True" Sorting="OnPlayerSorting"
+   Background="#182130" Foreground="#E9F0FC" BorderThickness="0" GridLinesVisibility="None" HeadersVisibility="Column" RowHeaderWidth="0"
+   HorizontalScrollBarVisibility="Auto" AlternatingRowBackground="#202B3D" RowBackground="#182130" SelectionMode="Single">
+   <DataGrid.Resources>
+    <Style TargetType="DataGridColumnHeader"><Setter Property="Background" Value="#29364B"/><Setter Property="Foreground" Value="#AFC1DB"/><Setter Property="Padding" Value="10,8"/></Style>
+    <Style TargetType="DataGridCell"><Setter Property="Padding" Value="10,8"/><Setter Property="BorderThickness" Value="0"/><Setter Property="Template"><Setter.Value><ControlTemplate TargetType="DataGridCell"><Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"><ContentPresenter/></Border></ControlTemplate></Setter.Value></Setter></Style>
+   </DataGrid.Resources>
+   <DataGrid.Columns>
+    <DataGridTextColumn Header="{x:Static app:UiText.Rank}" Binding="{Binding Rank}" Width="55" IsReadOnly="True" CanUserSort="False"/>
+    <DataGridTemplateColumn Header="{x:Static app:UiText.Pin}" Width="50" CanUserSort="False"><DataGridTemplateColumn.CellTemplate><DataTemplate><CheckBox IsChecked="{Binding IsPinned, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"/></DataTemplate></DataGridTemplateColumn.CellTemplate></DataGridTemplateColumn>
+    <DataGridTemplateColumn Header="{x:Static app:UiText.Player}" Width="*" CanUserSort="False"><DataGridTemplateColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding Name}" Foreground="{Binding Color}" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" ToolTip="{Binding Name}"/></DataTemplate></DataGridTemplateColumn.CellTemplate></DataGridTemplateColumn>
+    <DataGridTextColumn Header="{x:Static app:UiText.Class}" Binding="{Binding Class}" Width="110" IsReadOnly="True" CanUserSort="False"/>
+    <DataGridTextColumn Header="{x:Static app:UiText.TotalDamage}" Binding="{Binding Damage, StringFormat=N0}" SortMemberPath="Damage" Width="115" IsReadOnly="True"/>
+    <DataGridTextColumn x:Name="DpsColumn" Header="{x:Static app:UiText.Dps}" Binding="{Binding Dps, StringFormat=N1}" SortMemberPath="Dps" Width="95" IsReadOnly="True"/>
+    <DataGridTextColumn x:Name="HealingColumn" Header="{x:Static app:UiText.TotalHealing}" Binding="{Binding Healing, StringFormat=N0}" SortMemberPath="Healing" Width="115" IsReadOnly="True" Visibility="Collapsed"/>
+    <DataGridTextColumn x:Name="HpsColumn" Header="{x:Static app:UiText.Hps}" Binding="{Binding Hps, StringFormat=N1}" SortMemberPath="Hps" Width="95" IsReadOnly="True" Visibility="Collapsed"/>
+   </DataGrid.Columns>
+  </DataGrid>
+  <TextBlock Grid.Row="5" Text="{x:Static app:UiText.Footer}" Foreground="#8FA1BD" FontSize="11" Margin="0,12,0,0" TextWrapping="Wrap"/>
+ </Grid>
+</Window>
+
+
+

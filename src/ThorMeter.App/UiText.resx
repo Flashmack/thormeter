@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="WindowTitle" xml:space="preserve"><value>Thor Meter</value></data>
+  <data name="AlwaysOnTop" xml:space="preserve"><value>Always on top</value></data>
+  <data name="Tagline" xml:space="preserve"><value>LOCAL COMBAT ANALYZER</value></data>
+  <data name="Start" xml:space="preserve"><value>Start</value></data>
+  <data name="Stop" xml:space="preserve"><value>Stop</value></data>
+  <data name="ResetTotals" xml:space="preserve"><value>Reset totals</value></data>
+  <data name="OpenReplay" xml:space="preserve"><value>Open replay…</value></data>
+  <data name="Adapter" xml:space="preserve"><value>Adapter</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Connection" xml:space="preserve"><value>Connection</value></data>
+  <data name="UseConnection" xml:space="preserve"><value>Use connection</value></data>
+  <data name="RecordTraffic" xml:space="preserve"><value>Record selected game traffic locally (private raw data)</value></data>
+  <data name="ObservedDamage" xml:space="preserve"><value>OBSERVED DAMAGE · ALL TARGETS</value></data>
+  <data name="Player" xml:space="preserve"><value>PLAYER</value></data>
+  <data name="Class" xml:space="preserve"><value>CLASS</value></data>
+  <data name="TotalDamage" xml:space="preserve"><value>TOTAL DMG</value></data>
+  <data name="Dps" xml:space="preserve"><value>DPS</value></data>
+  <data name="Footer" xml:space="preserve"><value>Passive observation only • No uploads • EU live compatibility requires validation</value></data>
+  <data name="ModeLive" xml:space="preserve"><value>Live</value></data>
+  <data name="ModeDemo" xml:space="preserve"><value>Demo</value></data>
+  <data name="ModeReplay" xml:space="preserve"><value>Replay</value></data>
+  <data name="StatusStoppedSelectAdapter" xml:space="preserve"><value>Stopped. Select an adapter, then Start.</value></data>
+  <data name="HealthProtocolUnvalidated" xml:space="preserve"><value>EU protocol compatibility has not been validated with your client.</value></data>
+  <data name="ProgressActiveTime" xml:space="preserve"><value>Active time {0:N1} s</value></data>
+  <data name="StatusDiscovering" xml:space="preserve"><value>Discovering adapters… Demo remains available.</value></data>
+  <data name="StatusStoppedChooseAdapter" xml:space="preserve"><value>Stopped. Choose an adapter, then Start.</value></data>
+  <data name="StatusNoAdapters" xml:space="preserve"><value>No capture adapters. Install Npcap with WinPcap compatibility, then Refresh. Demo remains available.</value></data>
+  <data name="StatusDiscoveryTimeout" xml:space="preserve"><value>Npcap adapter discovery is taking too long. Demo works; try Refresh again later.</value></data>
+  <data name="StatusCaptureUnavailable" xml:space="preserve"><value>Capture unavailable: {0} Demo remains available.</value></data>
+  <data name="StatusChooseAdapter" xml:space="preserve"><value>Choose a capture adapter first.</value></data>
+  <data name="SaveRecordingFilter" xml:space="preserve"><value>Private traffic recording (*.jsonl)|*.jsonl</value></data>
+  <data name="SaveRecordingTitle" xml:space="preserve"><value>Save private selected-connection traffic</value></data>
+  <data name="HealthDemo" xml:space="preserve"><value>DEMO · Synthetic damage. This does not verify the live decoder.</value></data>
+  <data name="StatusDemoRunning" xml:space="preserve"><value>Demo running · late identification and pet ownership included.</value></data>
+  <data name="HealthAwaitingTraffic" xml:space="preserve"><value>Awaiting verified protocol traffic. EU live compatibility remains unverified.</value></data>
+  <data name="StatusLiveRecording" xml:space="preserve"><value>Live capture running · recording selected traffic locally.</value></data>
+  <data name="StatusLive" xml:space="preserve"><value>Live capture running · recording off.</value></data>
+  <data name="StatusCouldNotStart" xml:space="preserve"><value>Could not start: {0}</value></data>
+  <data name="StatusStoppedTotalsRetained" xml:space="preserve"><value>Stopped · totals retained until Reset or a new session.</value></data>
+  <data name="StatusStoppingReplay" xml:space="preserve"><value>Stopping replay…</value></data>
+  <data name="StatusSelectedConnection" xml:space="preserve"><value>Selected {0}</value></data>
+  <data name="HealthSelectionFailed" xml:space="preserve"><value>Connection selection failed: {0}</value></data>
+  <data name="ReplayFilter" xml:space="preserve"><value>Private traffic recording (*.jsonl)|*.jsonl</value></data>
+  <data name="ReplayTitle" xml:space="preserve"><value>Replay local filtered traffic</value></data>
+  <data name="StatusReplayReading" xml:space="preserve"><value>REPLAY · reading local traffic through the protocol decoder.</value></data>
+  <data name="HealthNoLiveCapture" xml:space="preserve"><value>No live capture is active.</value></data>
+  <data name="StatusReplayComplete" xml:space="preserve"><value>Replay complete · results use recording timestamps.</value></data>
+  <data name="StatusReplayStopped" xml:space="preserve"><value>Replay stopped.</value></data>
+  <data name="StatusReplayFailed" xml:space="preserve"><value>Replay failed: {0}</value></data>
+  <data name="StatusReplayFolderUnavailable" xml:space="preserve"><value>Replay folder unavailable: {0}</value></data>
+  <data name="ProgressSyntheticDemo" xml:space="preserve"><value>Synthetic demo data</value></data>
+  <data name="FlowSelected" xml:space="preserve"><value>[selected] </value></data>
+  <data name="FlowFramed" xml:space="preserve"><value> · framed</value></data>
+  <data name="FlowAwaitingFrames" xml:space="preserve"><value> · awaiting frames</value></data>
+  <data name="PlayerYou" xml:space="preserve"><value> (you)</value></data>
+  <data name="ShowHps" xml:space="preserve"><value>Show provisional HPS</value></data>
+  <data name="TotalHealing" xml:space="preserve"><value>OBS. HEAL</value></data>
+  <data name="Hps" xml:space="preserve"><value>OBS. HPS</value></data>
+  <data name="HealingCaution" xml:space="preserve"><value>Observed decoded heal amounts are provisional; effective healing and overheal are not validated.</value></data>
+  <data name="CopyHealDiagnostics" xml:space="preserve"><value>Copy heal candidates</value></data>
+  <data name="HealDiagnosticsNote" xml:space="preserve"><value>Decoded heal candidates, including events captured while paused or later excluded from totals. The first 8192 distinct source/recipient/skill/opcode groups are retained; later new groups may be omitted. IDs are hexadecimal. Review before sharing.</value></data>
+  <data name="NoHealDiagnostics" xml:space="preserve"><value>No decoded heal candidates for the selected connection yet.</value></data>
+  <data name="HealDiagnosticsCopied" xml:space="preserve"><value>Heal candidate summary copied to clipboard.</value></data>
+  <data name="HealDiagnosticsCopyFailed" xml:space="preserve"><value>Could not copy heal candidates: {0}</value></data>
+  <data name="ProgressDamageHealingTime" xml:space="preserve"><value>Damage time {0:N1} s · healing time {1:N1} s</value></data>
+  <data name="Pause" xml:space="preserve"><value>Pause</value></data>
+  <data name="Resume" xml:space="preserve"><value>Resume</value></data>
+  <data name="Target" xml:space="preserve"><value>Damage target</value></data>
+  <data name="TargetCategory" xml:space="preserve"><value>Target type</value></data>
+  <data name="TargetSearch" xml:space="preserve"><value>Find target</value></data>
+  <data name="TargetAlias" xml:space="preserve"><value>Target label</value></data>
+  <data name="SetTargetAlias" xml:space="preserve"><value>Set label</value></data>
+  <data name="ClearTargetAlias" xml:space="preserve"><value>Clear label</value></data>
+  <data name="TargetTag" xml:space="preserve"><value>Manual tag</value></data>
+  <data name="TargetTagNone" xml:space="preserve"><value>None</value></data>
+  <data name="TargetTagBoss" xml:space="preserve"><value>Boss</value></data>
+  <data name="TargetTagDummy" xml:space="preserve"><value>Dummy</value></data>
+  <data name="TargetTagBossMarked" xml:space="preserve"><value> · Boss (manual)</value></data>
+  <data name="TargetTagDummyMarked" xml:space="preserve"><value> · Dummy (manual)</value></data>
+  <data name="SelectMainTarget" xml:space="preserve"><value>Select main target</value></data>
+  <data name="MainTargetHint" xml:space="preserve"><value>Selects the current highest-damage NPC or unidentified target; this does not confirm a boss.</value></data>
+  <data name="TargetCategoryAll" xml:space="preserve"><value>All</value></data>
+  <data name="TargetCategoryPlayers" xml:space="preserve"><value>Players</value></data>
+  <data name="TargetCategoryNpcs" xml:space="preserve"><value>NPCs</value></data>
+  <data name="TargetCategoryPets" xml:space="preserve"><value>Pets</value></data>
+  <data name="TargetCategoryUnknown" xml:space="preserve"><value>Unknown</value></data>
+  <data name="TargetCategoryPlayer" xml:space="preserve"><value>Player</value></data>
+  <data name="TargetCategoryNpc" xml:space="preserve"><value>NPC</value></data>
+  <data name="TargetCategoryPet" xml:space="preserve"><value>Pet</value></data>
+  <data name="TargetCategoryUnknownSingle" xml:space="preserve"><value>Unknown</value></data>
+  <data name="TargetUnnamed" xml:space="preserve"><value>Unidentified</value></data>
+  <data name="TargetDisplay" xml:space="preserve"><value>{0} (#{1:X}) · {2} · {3:N0} dmg</value></data>
+  <data name="AllTargets" xml:space="preserve"><value>All targets</value></data>
+  <data name="TargetUnknown" xml:space="preserve"><value>Unknown #{0:X}</value></data>
+  <data name="TargetNamed" xml:space="preserve"><value>{0} (#{1:X})</value></data>
+  <data name="ObservedTarget" xml:space="preserve"><value>OBSERVED DAMAGE · {0}</value></data>
+  <data name="AliasSelected" xml:space="preserve"><value>Selected player alias</value></data>
+  <data name="SetAlias" xml:space="preserve"><value>Set alias</value></data>
+  <data name="ClearAlias" xml:space="preserve"><value>Clear alias</value></data>
+  <data name="ManualAlias" xml:space="preserve"><value> (manual)</value></data>
+  <data name="Rank" xml:space="preserve"><value>RANK</value></data>
+  <data name="Pin" xml:space="preserve"><value>PIN</value></data>
+</root>

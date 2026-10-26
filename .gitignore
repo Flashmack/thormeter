@@ -1,0 +1,21 @@
+# Build and IDE outputs
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+TestResults/
+# Private captures, recordings and diagnostics
+captures/
+recordings/
+logs/
+*.pcap
+*.pcapng
+*.jsonl
+*.log
+# Local settings / secrets
+.env
+.env.*
+appsettings.local.json
+AGENTS.md
